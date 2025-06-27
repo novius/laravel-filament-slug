@@ -21,8 +21,8 @@ class Slug extends TextInput
         $this->hintAction(Action::make($this->getName().'_lock')
             ->label(function () {
                 return $this->isReadOnly() ?
-                    'Unlock' :
-                    'Lock';
+                    trans('laravel-filament-slug::messages.unlock') :
+                    trans('laravel-filament-slug::messages.lock');
             })
             ->hidden(function (Get $get) {
                 return empty($get($this->getStatePath(false))) || $this->evaluate($this->isReadOnly);
