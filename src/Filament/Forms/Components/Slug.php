@@ -2,11 +2,11 @@
 
 namespace Novius\LaravelFilamentSlug\Filament\Forms\Components;
 
+use Filament\Actions\Action;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Closure;
-use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
