@@ -16,7 +16,7 @@ This package add a Slug field to Filament Forms
 
 * PHP >= 8.2
 * Laravel >= 11.0
-* Laravel Filament >= 3.3
+* Laravel Filament >= 4
 
 ## Installation
 
