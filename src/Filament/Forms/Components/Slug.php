@@ -9,6 +9,7 @@ use Closure;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Livewire\Component;
 
 class Slug extends TextInput
 {
@@ -24,7 +25,11 @@ class Slug extends TextInput
                     trans('laravel-filament-slug::messages.unlock') :
                     trans('laravel-filament-slug::messages.lock');
             })
-            ->hidden(function (Get $get) {
+            ->hidden(function (Get $get, $schemaOperation) {
+                if ($schemaOperation === 'view') {
+                    return true;
+                }
+
                 return empty($get($this->getStatePath(false))) || $this->evaluate($this->isReadOnly);
             })
             ->action(function (Get $get, Set $set) {
