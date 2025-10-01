@@ -2,14 +2,13 @@
 
 namespace Novius\LaravelFilamentSlug\Filament\Forms\Components;
 
+use Closure;
 use Filament\Actions\Action;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
-use Closure;
-use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Livewire\Component;
 
 class Slug extends TextInput
 {
